@@ -12,10 +12,34 @@
         tools:layout="@layout/fragment_home">
 
         <action
-            android:id="@+id/action_navigation_home_to_deviceDetailFragment"
-            app:destination="@id/deviceDetailFragment" />
+            android:id="@+id/action_home_to_deviceDetail"
+            app:destination="@id/deviceDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_home_to_addDevice"
+            app:destination="@id/addDeviceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/deviceDetailFragment"
+        android:name="com.example.ee494_smart_energy.ui.device.DeviceDetailFragment"
+        android:label="Device Detail"
+        tools:layout="@layout/fragment_device_detail" />
+
+    <fragment
+        android:id="@+id/addDeviceFragment"
+        android:name="com.example.ee494_smart_energy.ui.device.AddDeviceFragment"
+        android:label="Add Device"
+        tools:layout="@layout/fragment_add_device" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -28,13 +52,5 @@
         android:name="com.example.ee494_smart_energy.ui.notifications.NotificationsFragment"
         android:label="Notifications"
         tools:layout="@layout/fragment_notifications" />
-
-    <fragment
-        android:id="@+id/deviceDetailFragment"
-        android:name="com.example.ee494_smart_energy.ui.device.DeviceDetailFragment"
-        android:label="Device Detail"
-        tools:layout="@layout/fragment_device_detail">
-
-    </fragment>
 
 </navigation>

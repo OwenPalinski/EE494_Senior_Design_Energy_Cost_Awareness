@@ -11,7 +11,8 @@ import com.example.ee494_smart_energy.model.Device
 
 class DeviceAdapter(
     private val devices: List<Device>,
-    private val onClick: (Device) -> Unit
+    private val onClick: (Device) -> Unit,
+    private val onLongClick: (Device) -> Unit
 ) : RecyclerView.Adapter<DeviceAdapter.DeviceViewHolder>() {
 
     inner class DeviceViewHolder(itemView: View) :
@@ -50,6 +51,13 @@ class DeviceAdapter(
 
             holder.ipText.visibility = View.VISIBLE
             holder.ipText.text = device.ipAddress
+        }
+
+        holder.itemView.setOnLongClickListener {
+            if (device.name != "Add Device") {
+                onLongClick(device)
+            }
+            true
         }
 
         holder.itemView.setOnClickListener {
