@@ -53,4 +53,10 @@
         android:label="Notifications"
         tools:layout="@layout/fragment_notifications" />
 
+    <fragment
+        android:id="@+id/navigation_pricing"
+        android:name="com.example.ee494_smart_energy.ui.pricing.PricingFragment"
+        android:label="Pricing"
+        tools:layout="@layout/fragment_pricing" />
+
 </navigation>

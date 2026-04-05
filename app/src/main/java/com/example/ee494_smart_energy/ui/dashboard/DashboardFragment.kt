@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.ee494_smart_energy.databinding.FragmentDashboardBinding
+import androidx.navigation.fragment.findNavController
+import com.example.ee494_smart_energy.R
 
 class DashboardFragment : Fragment() {
 
@@ -31,6 +33,9 @@ class DashboardFragment : Fragment() {
         val textView: TextView = binding.textDashboard
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
+        }
+        binding.btnOpenPricing.setOnClickListener {
+            findNavController().navigate(R.id.navigation_pricing)
         }
         return root
     }
