@@ -1,19 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.EE494_Smart_Energy" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-
-        <!-- Primary Brand Color -->
+    <style name="Theme.EE494_Smart_Energy" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary_green</item>
-        <item name="colorPrimaryVariant">@color/primary_green_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-
-        <!-- Secondary Color -->
         <item name="colorSecondary">@color/primary_green_light</item>
-        <item name="colorSecondaryVariant">@color/primary_green_dark</item>
         <item name="colorOnSecondary">@color/white</item>
-
-        <!-- Status Bar -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-
+        <item name="android:statusBarColor">@color/primary_green_dark</item>
     </style>
 </resources>

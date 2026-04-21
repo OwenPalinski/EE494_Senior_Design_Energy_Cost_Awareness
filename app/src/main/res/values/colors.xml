@@ -10,4 +10,8 @@
     <color name="dark_text">#2E2E2E</color>
     <color name="card_border_gray">#444444</color>
     <color name="dark_green">#2F6F4F</color>
+    <color name="screen_background">#F6F8FB</color>
+    <color name="card_white">#FFFFFF</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="success_green">#16A34A</color>
 </resources>
